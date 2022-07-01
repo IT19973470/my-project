@@ -47,6 +47,7 @@ router.get('/set_leader/:id/:leaderId', (req, res, next) => {
 });
 
 router.get('/get_groups', (req, res, next) => {
+    console.log('student')
     let studentGrp = [];
     StudentGroup.find().then((studentGroupsArr) => {
         studentGroupsArr && studentGroupsArr.forEach((studentGrpObj) => {
